@@ -1,0 +1,420 @@
+<html>
+<head>
+<link rel="stylesheet" href="css/bootstrap.css"> 
+<link rel="stylesheet" href="css/font-awesome.min.css"> 
+<style>
+ 
+*
+    {
+        font-family: tahoma
+    }
+
+    body
+    {
+        overflow-x: hidden
+    }
+.nav
+    {
+    height: 100%;
+    background-color: rebeccapurple;
+    position: fixed;
+        left: 0%;
+        top: 0%;
+        transition: 1s all;
+        z-index: 9999
+    }
+.nav ul
+    {
+        list-style: none;
+        padding: 0px;
+        margin: 0px;
+        padding-top: 20px;
+        position: relative
+    }
+   .nav ul li
+    {
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 1s all;
+    padding-left: 20px;
+        display: flex;
+        align-items: center
+    }
+     .nav ul li:hover
+    {
+    color: rebeccapurple;
+        background-color: white
+    }
+    .notActive
+    {
+        left: -100% !important
+    }
+        .fa-times,
+        .fa-bars
+    {
+    color: white;
+    background-color: rebeccapurple;
+    display: block;
+    position: fixed;
+    text-align: center;
+    line-height: 65px;
+    top: 0px;
+    left: 0%;
+    cursor: pointer;
+        transition: 1s all;
+        opacity: 0;
+        z-index: -1
+    }
+.active
+    {
+        opacity: 1 !important;
+        z-index: 1 !important
+    }
+   
+   @media( min-width: 768px )
+   {
+    
+            .nav
+    {
+    width: 37%;
+    } 
+       .nav ul li
+    {
+    font-size: 27px;
+        height: 4.5%;    
+    }  
+    .left
+    {
+        left: 37% !important;
+    }     
+               .fa-times,
+        .fa-bars
+    {
+    width: 75px;
+    height: 75px;
+    font-size: 45px;
+    line-height: 75px;
+    }  
+       
+   }
+      
+   @media( min-width: 992px )
+   {
+       
+        .nav
+    {
+    width: 24%;
+    } 
+       .nav ul li
+    {
+    font-size: 18px;
+        height: 5.5%;    
+    }  
+    .left
+    {
+        left: 24% !important;
+    }    
+              .fa-times,
+        .fa-bars
+    {
+    width: 60px;
+    height: 60px;
+    font-size: 37px;
+    line-height: 60px;
+    } 
+       
+   }  
+       
+   @media( min-width: 1200px )
+   {
+    .nav
+    {
+    width: 23%;
+    } 
+       .nav ul li
+    {
+    font-size: 20px;
+        height: 5.5%;    
+    } 
+    .left
+    {
+        left: 23% !important;
+    }   
+           .fa-times,
+        .fa-bars
+    {
+    width: 65px;
+    height: 65px;
+    font-size: 40px;
+    line-height: 65px;
+    }    
+       
+   }
+    
+  
+  
+.header
+    {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%)
+    }
+    .header div
+    {
+    width: 100%;
+        height: 100%;
+        position: absolute;
+        opacity: 0;
+        transition: 1s all;
+        display: flex;
+        align-items: center
+    }
+  .slide1
+    {
+        background-image: url(mt-0945_slider-1.jpg);
+        background-repeat: no-repeat;
+    }
+      .slide2
+    {
+        background-image: url(mt-0945_slider-2.jpg);
+        background-repeat: no-repeat;
+    }
+      .slide3
+    {
+        background-image: url(mt-0945_slider-3.jpg);
+        background-repeat: no-repeat;
+    }
+   .active1
+    {
+        opacity: 1 !important
+    }
+    .header div section
+    {
+        padding-left: 50px;
+        background-color: red
+    }
+      .header div section h1
+    {
+        color: white;
+        font-weight: bold;
+        width: 70%;
+        margin-top: 0px
+    }
+         .header div section h3
+    {
+        color: white;
+        font-weight: bold;
+        width: 70%
+    }
+         .header div section p
+    {
+        color: white;
+        font-weight: bold;
+        width: 50%;
+        margin-bottom: 0px;
+        line-height: 30px
+    }
+    .header .controls
+    {
+    z-index: 9999;
+    position: absolute;
+    top: 50%;
+    right: 7%;
+    transform: translate(0%,-50%);
+        background-color: rebeccapurple
+    }
+        .header .controls span
+    {
+        width: 100%;
+        background-color: transparent;
+        border-radius: 50%;
+        display: block;
+        border: 3px white solid;
+        margin-bottom: 10px;
+        cursor: pointer
+    }
+   .active2
+    {
+        background-color: white !important
+    }
+    
+    @media( min-width: 768px )
+   {
+    
+     .header
+    {
+        height: 800px;
+    }
+         .header div section h1
+    {
+        font-size: 90px;
+    }
+         .header div section h3
+    {
+        font-size: 30px;
+    }
+         .header div section p
+    {
+        font-size: 18px;
+    } 
+           .header .controls span
+    {
+        height: 40px;
+    }    
+       .header .controls
+    {
+    width: 4%;
+    } 
+       
+   }
+      
+   @media( min-width: 992px )
+   {
+       
+   .header
+    {
+        height: 700px;
+    }
+         .header div section h1
+    {
+        font-size: 85px;
+    }
+         .header div section h3
+    {
+        font-size: 25px;
+    }
+         .header div section p
+    {
+        font-size: 16px;
+    } 
+           .header .controls span
+    {
+        height: 25px;
+    }    
+       .header .controls
+    {
+    width: 2%;
+    } 
+       
+   }  
+       
+   @media( min-width: 1200px )
+   {
+       
+   .header
+    {
+        height: 700px;
+    }
+         .header div section h1
+    {
+        font-size: 90px;
+    }
+         .header div section h3
+    {
+        font-size: 30px;
+    }
+         .header div section p
+    {
+        font-size: 18px;
+    } 
+           .header .controls span
+    {
+        height: 27px;
+    }    
+       .header .controls
+    {
+    width: 2%;
+    }    
+       
+   }
+      
+    
+    
+    
+</style>
+</head>  
+<body>
+ 
+<div class="nav">   
+<ul> 
+<li>Sony Playstation</li>
+<li>Xbox One , Two</li>    
+<li>Nintendo Wii </li>    
+<li>Nvidia Shield Tv</li>    
+<li>Strategy Games</li>    
+<li>Sports Games</li>  
+</ul> 
+</div>     
+<i class="fa fa-times active left" aria-hidden="true"></i>        
+<i class="fa fa-bars" aria-hidden="true"></i>        
+    
+   
+<div class="header">
+    
+<div class="slide1 active1">
+    
+<section class="content">  
+    
+<h1>FREE</h1>
+<h3>controller and game</h3>
+<p>
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dumen book. It has survived not only five centuries 
+</p>    
+ 
+</section>      
+    
+</div>    
+    
+<div class="slide2">
+
+<section class="content">    
+    
+<h1>BEST</h1>
+<h3>Game consoles 2016</h3>
+<p>
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dumen bnly five centuries 
+Lorem Ipsum is simply dumm the industry's standard dumen book. It has survived not only five centuries 
+</p>     
+   
+</section>    
+    
+</div>
+    
+<div class="slide3">
+    
+<section class="content">    
+    
+<h1>MOGA</h1>
+<h3>Game on. Anywhere</h3>
+<p>
+Lorem Ipsof the printing and typesettim has been the industry's standard dumen bnly five centuries 
+Lorem Ipsum is simply dumm then book. It has survived not only five centuries 
+</p>  
+    
+</section>    
+    
+</div>   
+    
+<section class="controls">
+    
+<span class="active2 one"></span>
+<span class="two"></span>
+<span class="three" style="margin-bottom: 0px"></span>
+    
+</section>    
+    
+</div>    
+    
+
+    
+<script src="js/jquery-3.2.0.min.js"></script>
+<script src="index.js"></script>  
+<script src="js/bootstrap.min.js"></script>     
+</body>    
+</html>  
+
+
